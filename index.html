@@ -9,31 +9,50 @@
    <!-- VUE JS -->
    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>   
 
+   <link rel="stylesheet" href="css/style.css">
+   
    <title>Vue Hello</title>
 
 </head>
-<body>
+<body class="bg-light">
 
 
    <div id="app">
 
-      <div class="container  mt-5">
+      <div class="container-fluid  w-100  mt-5  mx-5">
+         <div class="row">
 
-         <h1>{{messaggio}}</h1>
+            <h1>{{messaggio}}</h1>
 
-         <!-- btn con i loro output -->
-         <div class="d-flex  align-items-baseline  mt-4">
-            <button @click="salutare"  class="btn  btn-primary  rounded-5  px-4  me-5">Salutare ( )</button>
-            <p>{{salutoOut}}</p>
+            <!-- btn con i loro output -->
+            <div class="d-flex  align-items-baseline  mt-4">
+               <h4>stampo su DOM 'ciao' ---- > </h4>
+               <button @click="salutare"  class="btn  btn-primary  rounded-5  px-4  me-5">Salutare ( )</button>
+               <p>{{salutoOut}}</p>
+            </div>
+
+
+            <div class="d-flex  align-items-baseline  mt-4">
+               <h4>stampo su DOM un contatore con funzione ---- > </h4>
+               <button @click="contatore"  class="btn  btn-primary  rounded-5  px-4  me-5">contatore ( )</button>
+               <p>{{indice}}</p>
+            </div>
+
+
+            <div class="d-flex  align-items-baseline  mt-4">
+               <h4>stampo su DOM un contatore senza funzione ---- > </h4>
+               <button @click="indiceWithoutCounter++"  class="btn  btn-primary  rounded-5  px-4  me-5">contatore ( )</button>
+               <p>{{indiceWithoutCounter}}</p>
+            </div>
+
+
+            <div class="d-flex  align-items-baseline  mt-4">
+               <h4>inserisco una classe a 'p' al click del btn ---- > </h4>
+               <button @click="isBold = !isBold"  class="btn  btn-primary  rounded-5  px-4  me-5">isBold ( )</button>
+               <p :class="{'fw-bold': isBold}">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum aliquid nesciunt distinctio! Doloribus tempore debitis porro, autem dolores quisquam soluta!</p>
+            </div>
+
          </div>
-
-         <div class="d-flex  align-items-baseline  mt-4">
-            <button @click="contatore"  class="btn  btn-primary  rounded-5  px-4  me-5">contatore ( )</button>
-            <p>{{indice}}</p>
-         </div>
-
-
-
       </div>
 
    </div>

@@ -10,13 +10,20 @@ createApp({
    data(){
       return{
          messaggio: 'Primo messaggio con Data',
+
          saluto: 'ciao',
          salutoOut: '',
-         indice: 0
+
+         indice: 0,
+
+         indiceWithoutCounter: 0,
+
+         isBold: false,
       };
    },
 
 
+   
 
    // è un oggetto del metodo 'createApp'
    methods:{
@@ -27,7 +34,7 @@ createApp({
 
       contatore(){
          this.indice++;
-         console.log('contatore ---- ',this.indice);     // stampo un contatore quando clicco il btn
+         console.log('contatore ---- ',this.indice);     // stampo un contatore con una funzione quando clicco il btn
       }
 
    }
