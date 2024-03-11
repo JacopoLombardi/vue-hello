@@ -9,16 +9,27 @@ createApp({
    // il metodo 'data' gestirà i nostri dati
    data(){
       return{
-         messaggio: 'Primo messaggio con Data'
+         messaggio: 'Primo messaggio con Data',
+         saluto: 'ciao',
+         salutoOut: '',
+         indice: 0
       };
    },
 
+
+
    // è un oggetto del metodo 'createApp'
    methods:{
+      salutare(){
+         this.salutoOut = this.saluto;
+         console.log(this.salutoOut);    // stampo in console 'ciao' quando clicco il btn
+      },
 
-
+      contatore(){
+         this.indice++;
+         console.log('contatore ---- ',this.indice);     // stampo un contatore quando clicco il btn
+      }
 
    }
-
 
 }).mount('#app');
