@@ -24,7 +24,9 @@ createApp({
          multiple4: false,
          multiple3and4: false,
 
-         isBold: false
+         isBold: false,
+
+         img: 'https://cdn-7.motorsport.com/images/amp/6b7aKVE0/s6/teemu-suninen-mikko-markkula-h.jpg'
       };
    },
 
